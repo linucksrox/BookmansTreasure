@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/bookSearchFragment"
+        android:name="com.raywenderlich.android.bookmanstreasure.ui.booksearch.BookSearchFragment"
+        tools.layout="@layout/fragment_book_search"
+        android:label="Book Search Fragment"></fragment>
 
 </navigation>
