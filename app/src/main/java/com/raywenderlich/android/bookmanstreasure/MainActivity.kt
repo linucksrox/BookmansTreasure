@@ -35,6 +35,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import androidx.navigation.Navigation.findNavController
 import com.raywenderlich.android.bookmanstreasure.ui.MainActivityDelegate
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -55,6 +56,9 @@ class MainActivity : AppCompatActivity(), MainActivityDelegate {
       super.onBackPressed()
     }
   }
+
+  override fun onSupportNavigateUp() =
+          findNavController(this, R.id.navHostFragment).navigateUp()
 
   override fun setupNavDrawer(toolbar: Toolbar) {
     val toggle = ActionBarDrawerToggle(
